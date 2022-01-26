@@ -3,7 +3,7 @@ pipeline{
   
   environment{
     PATH ="/opt/maven3/bin:$path" 
-}
+ }
   stages{
     stage (git checkout){
        steps{
@@ -14,7 +14,7 @@ pipeline{
       steps{
           sh"mvn clean package"
           sh"mv target/*.war target/myweb.war"
-       }
-    }
-  }
-}
+        }
+     }
+   }
+ }
